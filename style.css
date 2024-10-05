@@ -1,0 +1,125 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Para evitar rolagem devido ao vídeo */
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #6a0dad;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Estilo do vídeo de fundo */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Esconde qualquer parte do vídeo que transborde */
+    z-index: 0; /* Mantém o vídeo atrás de outros elementos */
+}
+
+.video-background video {
+    min-width: 100%; /* Preenche toda a largura da tela */
+    min-height: 100%; /* Preenche toda a altura da tela */
+    width: auto; /* Mantém a proporção do vídeo */
+    height: auto; /* Mantém a proporção do vídeo */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o vídeo */
+}
+
+/* Sobreposição para o texto */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Escurece o fundo para melhor legibilidade */
+}
+
+/* Estilo da seção inicial */
+.home {
+    padding-top: 100px; /* Espaçamento para não sobrepor o cabeçalho */
+    text-align: center;
+    color: #fff; /* Cor do texto branca */
+    position: relative; /* Permite que os filhos se posicionem em relação a ele */
+    z-index: 1; /* Coloca a seção acima do vídeo e sobreposição */
+    display: flex; /* Usando Flexbox para centralizar verticalmente */
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da tela */
+}
+
+.home h1 {
+    font-family: 'Lobster', cursive; /* Fonte especial para D'Patrão */
+    font-size: 50px; /* Tamanho da fonte */
+}
+
+.home h2 {
+    font-size: 24px; /* Tamanho da fonte para Barbearia */
+}
+
+.whatsapp-container {
+    position: fixed;
+    bottom: 20px; /* Distância do fundo */
+    right: 20px; /* Distância da direita */
+    display: flex;
+    align-items: center; /* Alinha o balão com o ícone */
+}
+
+.whatsapp-icon {
+    background-color: #25D366; /* Cor do fundo do WhatsApp */
+    color: #fff; /* Cor do ícone */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 50%; /* Forma circular */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    font-size: 30px; /* Tamanho do ícone */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Transição suave para a cor do fundo */
+}
